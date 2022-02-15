@@ -5,10 +5,15 @@ import { Text } from 'theme-ui';
 export const Answer = ({ answer }) => {
   console.log('render question');
   return (
-    <Box p={3}>
-      <Text as="p">
-        <ReactMarkdown>{answer}</ReactMarkdown>
-      </Text>
-    </Box>
+    <Text
+      p={3}
+      as="p"
+      sx={{
+        height: answer && '2rem',
+        marginBottom: answer && '15px',
+      }}
+    >
+      <ReactMarkdown>{answer}</ReactMarkdown>
+    </Text>
   );
 };
