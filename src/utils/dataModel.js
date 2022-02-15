@@ -1,0 +1,19 @@
+export default {
+  heading: 'Frequently Asked Questions',
+  faqs: [
+    {
+      question: 'Belli Phoeboque?',
+      answer:
+        'Solus ventus multaque bracchia rapto. Solitum fluctus: qua ad, scilicet proles me sine. Nos terga, qui fertur, ara erit, quam oris inire Antium Phoebi.',
+    },
+    {
+      question: 'Pulvereamque plura adit?',
+      answer:
+        'Moderatius tumet, sine __nomen forma rependatur__ sidera anxia, et. Mors laeva vobis quinque abit urar procumbit e! [Aliis](#dat-nube-squalebant) ille. Laetis commemorare caelum testa partes reverti, dum saucia mixta debere pars ait, mihi epytus sequitur opacas. Tum sermone servato vidisse ceu promittuntque urget causa mentis fulva dumque, alti!',
+    },
+    {
+      question: 'Fidem his natam?',
+      answer: `Lorem markdownum magnis, tulisti bimembres ingenii vaga suis felix huc illo vertebar, per bella invecta intremuere pennis. Dent et iaculum, et coniunx Cererem tellus Eurystheus est mentis verendam Iuppiter mente, Cupidinis. Undas ipsa mendacia comas modo cum; manu crater subitis saevorum pectore. Orithyia flamina aequor turbatusque esse! Parantem dictis ex mediusve fraxinus Nereida specularer: his et placidis, opus ictus, petitos.`,
+    },
+  ],
+};

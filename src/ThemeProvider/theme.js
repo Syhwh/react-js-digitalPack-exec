@@ -28,6 +28,10 @@ export const theme = {
       lineHeight: 'heading',
       fontWeight: 'heading',
     },
+    subHeading: {
+      fontFamily: 'heading',
+      letterSpacing: '0.18em',
+    },
   },
   styles: {
     root: {
@@ -40,8 +44,8 @@ export const theme = {
       fontSize: 5,
     },
     h2: {
-      variant: 'text.heading',
-      fontSize: 4,
+      variant: 'text.subHeading',
+      fontSize: 1,
     },
     h3: {
       variant: 'text.heading',

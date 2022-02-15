@@ -3,7 +3,7 @@ import { Box } from 'theme-ui';
 
 export const Test = () => {
   return (
-    <Box p={4} color="black" bg="primary">
+    <Box p={4} color="black" bg="background" useRootStyles={true}>
       Beep saddf sdf
       <h1>trasdfasdf, </h1>
     </Box>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Test } from './components/Test.js';
+import { MainPage } from './Pages/MainPage';
+import Prov from './ThemeProvider/ThemeProvider';
 import './style.css';
 
 export default function App() {
   return (
-    <div>
-      <Test />
-    </div>
+    <Prov>
+      <MainPage />
+    </Prov>
   );
 }
