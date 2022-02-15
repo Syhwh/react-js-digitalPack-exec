@@ -1,11 +1,19 @@
 import React from 'react';
 import { IconButton } from 'theme-ui';
 
-export const ArrowIcon = ({ showAnswer }) => {
+export const ArrowIcon = ({ showAnswer, answer }) => {
+  console.log('render ArrowIcon');
+  console.log(answer);
   return (
     <IconButton
       sx={{
         cursor: 'pointer',
+        color: answer ? 'red' : 'blue',
+
+        transform: answer ? 'rotateZ(90deg)' : '',
+      }}
+      style={{
+        border: answer ? '2px solid red' : '2px solid green',
       }}
       onClick={() => showAnswer((answer) => !answer)}
       aria-label=""

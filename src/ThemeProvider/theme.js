@@ -20,7 +20,7 @@ export const theme = {
     background: '#FCF9EC',
     primary: '#113034',
     secondary: '#88979A',
-    muted: '#f6f6f6',
+    muted: '#EAE4CE',
   },
   text: {
     heading: {
@@ -41,7 +41,6 @@ export const theme = {
     },
     h1: {
       variant: 'text.heading',
-      fontSize: 5,
     },
     h2: {
       variant: 'text.subHeading',
