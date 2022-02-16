@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Heading, Flex, Box } from 'theme-ui';
 import { Answer } from './Answer';
 import { ArrowIcon } from './ArrowIcon';
 import { DT, DD } from './DescriptionListComponents';
 
-export const AccordionItem = ({ showAnswer, item, index, onClick }) => {
+export const AccordionItem = ({
+  showAnswer,
+  item,
+  index,
+  activeIndex,
+  onClick,
+}) => {
   console.log('render accordion ITEM');
+  const [open, setOpen] = useState();
+
+  console.log(activeIndex);
+  console.log(index);
+  const isOpen = index === activeIndex;
+
+  const handleOnclick = (status) => {
+    // console.log('status');
+    onClick(index);
+    setOpen((open) => !open);
+  };
+
   return (
     <Flex
       sx={{
@@ -28,9 +46,15 @@ export const AccordionItem = ({ showAnswer, item, index, onClick }) => {
         <Heading p={0} as="h2" variant="subHeading" color="secondary">
           {item.question}
         </Heading>
-        {showAnswer && <Answer answer={item.answer} showAnswer={showAnswer} />}
+        {open && isOpen && (
+          <Answer answer={item.answer} showAnswer={showAnswer} />
+        )}
       </Box>
-      <ArrowIcon onClick={onClick} showAnswer={showAnswer} />
+      <ArrowIcon
+        handleClick={handleOnclick}
+        showAnswer={open}
+        isOpen={isOpen}
+      />
     </Flex>
   );
 };

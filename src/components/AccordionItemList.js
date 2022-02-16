@@ -15,7 +15,8 @@ const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
             showAnswer={showAnswer}
             item={item}
             index={index}
-            onClick={() => selectIndex(index)}
+            activeIndex={activeIndex}
+            onClick={selectIndex}
           />
         );
       })}

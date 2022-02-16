@@ -2,7 +2,7 @@ import React from 'react';
 import { IconButton } from 'theme-ui';
 import { keyframes } from '@emotion/react';
 
-export const ArrowIcon = ({ showAnswer, onClick }) => {
+export const ArrowIcon = ({ showAnswer, handleClick, isOpen }) => {
   console.log('render ArrowIcon');
   console.log(showAnswer);
 
@@ -20,12 +20,12 @@ export const ArrowIcon = ({ showAnswer, onClick }) => {
       sx={{
         padding: 0,
         cursor: 'pointer',
-        animation: showAnswer && `${rotation} 0.5s linear 0.1s 1  `,
+        animation: showAnswer && isOpen && `${rotation} 0.25s linear 0.1s 1  `,
         border: '2px solid red',
         height: '1rem',
-        transform: showAnswer && 'rotateZ(90deg)',
+        transform: showAnswer && isOpen ? 'rotateZ(90deg)' : '',
       }}
-      onClick={onClick}
+      onClick={handleClick}
       aria-controls="widget1"
       aria-expanded={showAnswer}
     >

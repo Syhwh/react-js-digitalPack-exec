@@ -12,7 +12,7 @@ export const Accordion = ({ questions }) => {
   const MemoItemList = memo(AccordionItemList);
 
   const params = useMemo(() => ({ activeIndex }), [activeIndex]);
-  const onClick = useCallback(() => setActiveIndex, [activeIndex]);
+  const onClick = useCallback(() => setActiveIndex, [setActiveIndex]);
   return (
     <Box>
       <Heading
