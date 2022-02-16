@@ -12,13 +12,6 @@ export const Accordion = ({ questions }) => {
   const onClick = useCallback(
     (idx) => {
       setActiveIndex(idx);
-      // console.clear();
-      console.log('***********************');
-
-      console.log(idx);
-      console.log(activeIndex);
-
-      console.log('***********************');
     },
     [activeIndex]
   );

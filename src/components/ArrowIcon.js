@@ -3,8 +3,6 @@ import { IconButton } from 'theme-ui';
 import { keyframes } from '@emotion/react';
 
 export const ArrowIcon = ({ showAnswer, handleClick, isOpen, index }) => {
-  console.log('render ArrowIcon');
-
   const rotation = keyframes`
   from {
     transform: rotate(0deg);

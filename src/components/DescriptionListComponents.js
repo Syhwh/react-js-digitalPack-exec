@@ -4,8 +4,6 @@ export const DL = styled('dl')`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-
 `;
 
 export const DT = styled('dt')`
