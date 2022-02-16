@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const MarkdownContent = ({ children }) => {};
+export const MarkdownContent = ({ children }) => {
+  return <ReactMarkdown>{children}</ReactMarkdown>;
+};
