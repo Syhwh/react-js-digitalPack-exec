@@ -9,7 +9,7 @@ export const AccordionItem = ({
   item,
   index,
   activeIndex,
-  onClick,
+  selectIndex,
 }) => {
   console.log('render accordion ITEM');
   const [open, setOpen] = useState();
@@ -18,9 +18,8 @@ export const AccordionItem = ({
   console.log(index);
   const isOpen = index === activeIndex;
 
-  const handleOnclick = (status) => {
-    // console.log('status');
-    onClick(index);
+  const handleOnclick = () => {
+    selectIndex(index);
     setOpen((open) => !open);
   };
 
@@ -38,7 +37,6 @@ export const AccordionItem = ({
     >
       <Box
         sx={{
-          border: '2px solid red',
           maxWidth: '90%',
           textAlign: 'left',
         }}

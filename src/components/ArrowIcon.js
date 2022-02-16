@@ -20,8 +20,7 @@ export const ArrowIcon = ({ showAnswer, handleClick, isOpen }) => {
       sx={{
         padding: 0,
         cursor: 'pointer',
-        animation: showAnswer && isOpen && `${rotation} 0.25s linear 0.1s 1  `,
-        border: '2px solid red',
+        animation: showAnswer && isOpen && `${rotation} 0.25s linear 0s 1  `,
         height: '1rem',
         transform: showAnswer && isOpen ? 'rotateZ(90deg)' : '',
       }}

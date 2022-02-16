@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { Text } from 'theme-ui';
-// import { css } from 'styled-components';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
@@ -31,10 +30,6 @@ export const Answer = ({ answer }) => {
     </>
   );
 };
-
-// const inlineStyle = css`
-//     color: #333;
-// `;
 
 export const SMD = styled(ReactMarkdown)`
 
