@@ -7,8 +7,6 @@ import AccordionItemList from './AccordionItemList';
 export const Accordion = ({ questions }) => {
   const { heading, faqs } = questions;
   const [activeIndex, setActiveIndex] = useState();
-  console.log('render acordion');
-
   const onClick = useCallback(
     (idx) => {
       setActiveIndex(idx);

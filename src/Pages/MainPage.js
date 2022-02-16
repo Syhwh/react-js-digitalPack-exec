@@ -4,7 +4,6 @@ import { Accordion } from '../components/Accordion';
 import data from '../utils/dataModel';
 
 export const MainPage = () => {
-  console.log('render main page');
   return (
     <Container
       sx={{

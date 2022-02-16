@@ -1,13 +1,9 @@
 import React from 'react';
 import { Box } from 'theme-ui';
 import { keyframes } from '@emotion/react';
-
 import { MarkdownContent } from './MarkdownContent';
 
-const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
-
 export const Answer = ({ answer, index }) => {
-  console.log('render Answer');
   const opacity = keyframes`
   from {
     opacity: 0;

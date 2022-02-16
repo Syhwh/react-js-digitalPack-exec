@@ -3,8 +3,6 @@ import AccordionItem from './AccordionItem';
 import { DL } from './DescriptionListComponents';
 
 const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
-  console.log('render AccordionItemList');
-  console.log(activeIndex);
   return (
     <DL>
       {questionList.map((item, index) => {

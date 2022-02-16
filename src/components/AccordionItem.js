@@ -4,25 +4,11 @@ import { Answer } from './Answer';
 import { ArrowIcon } from './ArrowIcon';
 import { DT, DD } from './DescriptionListComponents';
 
-const AccordionItem = ({
-  showAnswer,
-  item,
-  index,
-  activeIndex,
-  selectIndex,
-}) => {
-  console.log('render accordion ITEM');
-  // console.log(activeIndex);
-  // console.log(index);
+const AccordionItem = ({ item, index, activeIndex, selectIndex }) => {
   const isOpen = index === activeIndex;
   const [open, setOpen] = useState(isOpen);
 
   const handleOnclick = () => {
-    console.clear();
-    console.log(index);
-    console.log(activeIndex);
-    console.log(open);
-    console.log(isOpen);
     selectIndex(index);
     setOpen(isOpen && !open ? isOpen : !isOpen);
   };
@@ -45,11 +31,15 @@ const AccordionItem = ({
           textAlign: 'left',
         }}
       >
-        <Heading p={0} as="h2" variant="subHeading" color="secondary">
-          {item.question}
-        </Heading>
+        <DT>
+          <Heading p={0} as="h2" variant="subHeading" color="secondary">
+            {item.question}
+          </Heading>
+        </DT>
         {open && isOpen && (
-          <Answer answer={item.answer} showAnswer={open} index={index} />
+          <DT>
+            <Answer answer={item.answer} showAnswer={open} index={index} />
+          </DT>
         )}
       </Box>
       <ArrowIcon
