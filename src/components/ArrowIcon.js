@@ -7,15 +7,20 @@ export const ArrowIcon = ({ showAnswer, onClick }) => {
   return (
     <IconButton
       sx={{
+        padding: 0,
         cursor: 'pointer',
         transform: showAnswer ? 'rotateZ(90deg)' : '',
-        border: '2px dashed ',
+        border: '2px solid red',
+        height: '1rem',
       }}
       onClick={onClick}
       aria-controls="widget1"
       aria-expanded={showAnswer}
     >
       <svg
+        style={{
+          translate: '25%',
+        }}
         width="24"
         height="12"
         viewBox="0 0 24 12"

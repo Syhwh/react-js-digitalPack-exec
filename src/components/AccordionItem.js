@@ -7,9 +7,12 @@ import { DT, DD } from './DescriptionListComponents';
 export const AccordionItem = ({ showAnswer, item, index, onClick }) => (
   <Flex
     sx={{
-      padding: '20px 21px',
+      padding: '19px 0',
+      alignItems: 'flex-start',
       justifyContent: 'space-between',
       borderBottom: '1px solid #EAE4CE',
+      borderLeft: '2px solid red',
+      borderRight: '2px solid red',
       ':last-of-type': {
         borderBottom: 'none',
       },
@@ -18,9 +21,12 @@ export const AccordionItem = ({ showAnswer, item, index, onClick }) => (
     <Box
       sx={{
         width: ['80%', '50%'],
+        border: '2px solid red',
+        width: '100%',
       }}
     >
       <Heading
+        p={0}
         sx={{
           fontSize: [1, 2],
         }}
