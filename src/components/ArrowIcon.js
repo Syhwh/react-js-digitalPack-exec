@@ -1,22 +1,19 @@
 import React from 'react';
 import { IconButton } from 'theme-ui';
 
-export const ArrowIcon = ({ showAnswer, answer }) => {
+export const ArrowIcon = ({ showAnswer, onClick }) => {
   console.log('render ArrowIcon');
-  console.log(answer);
+  console.log(showAnswer);
   return (
     <IconButton
       sx={{
         cursor: 'pointer',
-        color: answer ? 'red' : 'blue',
-
-        transform: answer ? 'rotateZ(90deg)' : '',
+        transform: showAnswer ? 'rotateZ(90deg)' : '',
+        border: '2px dashed ',
       }}
-      style={{
-        border: answer ? '2px solid red' : '2px solid green',
-      }}
-      onClick={() => showAnswer((answer) => !answer)}
-      aria-label=""
+      onClick={onClick}
+      aria-controls="widget1"
+      aria-expanded={showAnswer}
     >
       <svg
         width="24"
