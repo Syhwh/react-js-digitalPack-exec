@@ -1,46 +1,31 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-
-import { Text } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { keyframes } from '@emotion/react';
-import styled from '@emotion/styled';
+
+import { MarkdownContent } from './MarkdownContent';
 
 const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 
-export const Answer = ({ answer }) => {
+export const Answer = ({ answer, index }) => {
   console.log('render Answer');
+  const opacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
   return (
     <>
-      <Text
-        as="p"
-        variant="regular"
-        style={{
-          fontSize: [0, 1],
-          wordBreak: 'break-all',
-          whiteSpace: 'pre-wrap',
-          overflow: 'hidden',
-          animationDuration: '3s',
-          animationName: 'fadeIn',
-          ':before': {},
+      <Box
+      id={index}
+        sx={{
+          animation: `${opacity} 0.25s linear 0s 1  `,
         }}
       >
-        {answer}
-      </Text>
-      <SMD>{answer}</SMD>
+        <MarkdownContent>{answer}</MarkdownContent>
+      </Box>
     </>
   );
 };
-
-export const SMD = styled(ReactMarkdown)`
-
-  padding:0;
-  margin:0;
-
-  color:red;
-  border:5px solid blue;
-  // word-break:break-all;
-  overflow-wrap: break-word;
-  overflow:hidden;
-  
-
-`;

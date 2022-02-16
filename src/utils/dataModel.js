@@ -4,7 +4,7 @@ export default {
     {
       question: 'What are the benefits of CBD oil capsules?',
       answer:
-        'Solus ventus multaque bracchia rapto. Solitum fluctus: qua ad, scilicet proles me sine. Nos terga, qui fertur, ara erit, quam oris inire Antium Phoebi.',
+        'Our vegan softgel with organic whole plant hemp extract is optimized for better absorption through a proprietary microencapsulation process and enhanced with clove bud, black pepper and curcumin oils, helping to deliver the cannabinoids more efficiently and effectively than traditional hemp oils. So you can handle stress before it hits.',
     },
     {
       question: 'Belli Phoeboque?',

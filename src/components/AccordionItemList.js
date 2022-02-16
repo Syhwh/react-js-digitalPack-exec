@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { AccordionItem } from './AccordionItem';
+import AccordionItem from './AccordionItem';
 import { DL } from './DescriptionListComponents';
 
 const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
@@ -11,7 +11,7 @@ const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
         const showAnswer = index === activeIndex ? true : false;
         return (
           <AccordionItem
-            key={index}
+            key={index + item.question}
             showAnswer={showAnswer}
             item={item}
             index={index}

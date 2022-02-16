@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { Heading, Flex, Box } from 'theme-ui';
 import { Answer } from './Answer';
 import { ArrowIcon } from './ArrowIcon';
 import { DT, DD } from './DescriptionListComponents';
 
-export const AccordionItem = ({
+const AccordionItem = ({
   showAnswer,
   item,
   index,
@@ -12,11 +12,10 @@ export const AccordionItem = ({
   selectIndex,
 }) => {
   console.log('render accordion ITEM');
-  const [open, setOpen] = useState();
-
   console.log(activeIndex);
   console.log(index);
   const isOpen = index === activeIndex;
+  const [open, setOpen] = useState(isOpen);
 
   const handleOnclick = () => {
     selectIndex(index);
@@ -45,16 +44,17 @@ export const AccordionItem = ({
           {item.question}
         </Heading>
         {open && isOpen && (
-          <Answer answer={item.answer} showAnswer={showAnswer} />
+          <Answer answer={item.answer} showAnswer={showAnswer} index={index} />
         )}
       </Box>
       <ArrowIcon
         handleClick={handleOnclick}
         showAnswer={open}
         isOpen={isOpen}
+        index={index}
       />
     </Flex>
   );
 };
-//
-// aria-controls={`faq${index + 1}_desc`}
+
+export default memo(AccordionItem);

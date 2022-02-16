@@ -12,7 +12,14 @@ export const Accordion = ({ questions }) => {
   const MemoItemList = memo(AccordionItemList);
 
   const params = useMemo(() => ({ activeIndex }), [activeIndex]);
-  const onClick = useCallback(() => setActiveIndex, [setActiveIndex]);
+  const onClick = useCallback((idx) => {
+    setActiveIndex(idx);
+    console.log('***********************');
+    console.log(idx);
+    console.log(activeIndex);
+
+    console.log('***********************');
+  }, []);
   return (
     <Box>
       <Heading
@@ -21,7 +28,7 @@ export const Accordion = ({ questions }) => {
           width: '80%',
           fontSize: [2, 4],
           height: '1rem',
-          paddingBottom: '1.5rem',
+          marginBottom: '1.8rem',
           '@media screen and (min-width: 40em)': {
             width: '100%',
           },
@@ -32,7 +39,7 @@ export const Accordion = ({ questions }) => {
       <AccordionItemList
         questionList={faqs}
         activeIndex={activeIndex}
-        selectIndex={setActiveIndex}
+        selectIndex={onClick}
       />
     </Box>
   );

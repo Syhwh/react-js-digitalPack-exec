@@ -2,7 +2,7 @@ import React from 'react';
 import { IconButton } from 'theme-ui';
 import { keyframes } from '@emotion/react';
 
-export const ArrowIcon = ({ showAnswer, handleClick, isOpen }) => {
+export const ArrowIcon = ({ showAnswer, handleClick, isOpen, index }) => {
   console.log('render ArrowIcon');
   console.log(showAnswer);
 
@@ -25,8 +25,8 @@ export const ArrowIcon = ({ showAnswer, handleClick, isOpen }) => {
         transform: showAnswer && isOpen ? 'rotateZ(90deg)' : '',
       }}
       onClick={handleClick}
-      aria-controls="widget1"
-      aria-expanded={showAnswer}
+      aria-controls={index}
+      aria-expanded={isOpen}
     >
       <svg
         style={{
