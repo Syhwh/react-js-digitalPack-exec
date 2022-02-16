@@ -9,17 +9,19 @@ export const Accordion = ({ questions }) => {
   const [activeIndex, setActiveIndex] = useState();
   console.log('render acordion');
 
-  const MemoItemList = memo(AccordionItemList);
+  const onClick = useCallback(
+    (idx) => {
+      setActiveIndex(idx);
+      // console.clear();
+      console.log('***********************');
 
-  const params = useMemo(() => ({ activeIndex }), [activeIndex]);
-  const onClick = useCallback((idx) => {
-    setActiveIndex(idx);
-    console.log('***********************');
-    console.log(idx);
-    console.log(activeIndex);
+      console.log(idx);
+      console.log(activeIndex);
 
-    console.log('***********************');
-  }, []);
+      console.log('***********************');
+    },
+    [activeIndex]
+  );
   return (
     <Box>
       <Heading

@@ -4,7 +4,6 @@ import { keyframes } from '@emotion/react';
 
 export const ArrowIcon = ({ showAnswer, handleClick, isOpen, index }) => {
   console.log('render ArrowIcon');
-  console.log(showAnswer);
 
   const rotation = keyframes`
   from {

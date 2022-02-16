@@ -8,11 +8,9 @@ const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
   return (
     <DL>
       {questionList.map((item, index) => {
-        const showAnswer = index === activeIndex ? true : false;
         return (
           <AccordionItem
             key={index + item.question}
-            showAnswer={showAnswer}
             item={item}
             index={index}
             activeIndex={activeIndex}
@@ -24,4 +22,4 @@ const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
   );
 };
 
-export default memo(AccordionItemList);
+export default AccordionItemList;
