@@ -24,3 +24,14 @@ p {
   line-height: 20px;
   color: #113034;
 }
+
+.markdown h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #113034;
+}

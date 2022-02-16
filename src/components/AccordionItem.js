@@ -1,4 +1,4 @@
-import React, { useState, memo, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Heading, Flex, Box } from 'theme-ui';
 import { Answer } from './Answer';
 import { ArrowIcon } from './ArrowIcon';
@@ -37,9 +37,9 @@ const AccordionItem = ({ item, index, activeIndex, selectIndex }) => {
           </Heading>
         </DT>
         {open && isOpen && (
-          <DT>
+          <DD>
             <Answer answer={item.answer} showAnswer={open} index={index} />
-          </DT>
+          </DD>
         )}
       </Box>
       <ArrowIcon
