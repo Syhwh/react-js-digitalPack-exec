@@ -10,15 +10,16 @@ export const Accordion = ({ questions }) => {
   const [activeIndex, setActiveIndex] = useState();
   console.log('render acordion');
   return (
-    <Box paddingTop={20}>
+    <Box>
       <Heading
+        variant={'heading'}
         sx={{
-          width: '50%',
-          fontSize: [3, 5],
-
-          '@media screen and (min-width: 40em)': {
+          width: '80%',
+          fontSize: [2, 4],
+          height: '1rem',
+          paddingBottom: '1.5rem',
+          '@media screen and (min-width: 50em)': {
             width: '100%',
-            // color: 'green',
           },
         }}
       >

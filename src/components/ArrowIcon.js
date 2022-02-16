@@ -1,17 +1,33 @@
 import React from 'react';
 import { IconButton } from 'theme-ui';
+import { keyframes } from '@emotion/react';
 
 export const ArrowIcon = ({ showAnswer, onClick }) => {
   console.log('render ArrowIcon');
   console.log(showAnswer);
+
+  const rotation = keyframes({
+    from: { transform: 0 },
+    to: { transform: 'rotateZ(90deg)' },
+  });
+  const wave = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+`;
+
   return (
     <IconButton
       sx={{
         padding: 0,
         cursor: 'pointer',
-        transform: showAnswer ? 'rotateZ(90deg)' : '',
+        animation: showAnswer && `${wave} 0.5s linear 0.1s 1  `,
         border: '2px solid red',
         height: '1rem',
+        transform: showAnswer && 'rotateZ(90deg)',
       }}
       onClick={onClick}
       aria-controls="widget1"

@@ -17,8 +17,9 @@ export const AccordionItemList = ({
             showAnswer={showAnswer}
             item={item}
             index={index}
-            onClick={() => {
-              selectIndex(index);
+            onClick={(current) => {
+              console.log(current);
+              current === index ? selectIndex(null) : selectIndex(index);
             }}
           />
         );

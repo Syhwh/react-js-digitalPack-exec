@@ -20,23 +20,12 @@ export const AccordionItem = ({ showAnswer, item, index, onClick }) => (
   >
     <Box
       sx={{
-        width: ['80%', '50%'],
         border: '2px solid red',
-        width: '100%',
       }}
     >
-      <Heading
-        p={0}
-        sx={{
-          fontSize: [1, 2],
-        }}
-        as="h2"
-        variant="subHeading"
-        color="secondary"
-      >
+      <Heading p={0} as="h2" variant="subHeading" color="secondary">
         {item.question}
       </Heading>
-
       {showAnswer && <Answer answer={item.answer} showAnswer={showAnswer} />}
     </Box>
     <ArrowIcon onClick={onClick} showAnswer={showAnswer} />

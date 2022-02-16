@@ -11,10 +11,7 @@ export const theme = {
     heading: 700,
     bold: 700,
   },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-  },
+  lineHeights: [1, 1.2, 1.29, 1.71, 2.14],
   colors: {
     text: '#000',
     background: '#FCF9EC',
@@ -25,12 +22,24 @@ export const theme = {
   text: {
     heading: {
       fontFamily: 'heading',
-      lineHeight: 'heading',
+      lineHeight: [3, 4],
       fontWeight: 'heading',
+      letterSpacing: '0.2em',
+      textTransform: 'uppercase',
+      fontWeight: 'bold',
     },
     subHeading: {
       fontFamily: 'heading',
       letterSpacing: '0.18em',
+      ontWeight: 'bold',
+      lineHeight: [2],
+      fontSize: [0, 1],
+      textTransform: 'uppercase',
+    },
+    regular: {
+      fontFamily: 'body',
+      color: 'red',
+      lineHeight: [1],
     },
   },
   styles: {
@@ -44,11 +53,13 @@ export const theme = {
     },
     h2: {
       variant: 'text.subHeading',
-      fontSize: 1,
     },
     h3: {
       variant: 'text.heading',
       fontSize: 3,
+    },
+    p: {
+      variant: 'text.regular',
     },
   },
 };
