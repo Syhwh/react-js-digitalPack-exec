@@ -22,9 +22,8 @@ export default {
     },
     {
       question: 'Fidem his natam?',
-      answer: `
-      just textasdasdasda.sdmas.,dma.s,dm/a.,msd/a.,dfm;alsdf;lkafkjqbe lkdja;skldfjlasdjf;laksjdf;lkajsd;lfkja;sdkjf;askdf
-      ## Features
+      answer: `## Features
+
       - Import a HTML file and watch it magically convert to Markdown
       - Drag and drop images (requires your Dropbox account be linked)
       - Import and save files from GitHub, Dropbox, Google Drive and One Drive

@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useMemo, useCallback } from 'react';
 
 import { Heading, Box } from 'theme-ui';
-import { Question } from './Question';
 
-import { AccordionItemList } from './AccordionItemList';
+import AccordionItemList from './AccordionItemList';
 
 export const Accordion = ({ questions }) => {
   const { heading, faqs } = questions;
   const [activeIndex, setActiveIndex] = useState();
   console.log('render acordion');
+
+  const MemoItemList = memo(AccordionItemList);
+
+  const params = useMemo(() => ({ activeIndex }), [activeIndex]);
+  const onClick = useCallback(() => setActiveIndex, [activeIndex]);
   return (
     <Box>
       <Heading
@@ -18,7 +22,7 @@ export const Accordion = ({ questions }) => {
           fontSize: [2, 4],
           height: '1rem',
           paddingBottom: '1.5rem',
-          '@media screen and (min-width: 50em)': {
+          '@media screen and (min-width: 40em)': {
             width: '100%',
           },
         }}
@@ -33,13 +37,3 @@ export const Accordion = ({ questions }) => {
     </Box>
   );
 };
-
-{
-  /* 
-{faqs.map((faq, idx) => (
-<>
-  {idx > 0 && <Divider color="muted" />}
-  <Question key={idx} faq={faq} />
-</>
-))} */
-}

@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { AccordionItem } from './AccordionItem';
 import { DL } from './DescriptionListComponents';
 
-export const AccordionItemList = ({
-  questionList = [],
-  activeIndex,
-  selectIndex,
-}) => {
+const AccordionItemList = ({ questionList = [], activeIndex, selectIndex }) => {
+  console.log('render AccordionItemList');
+  console.log(activeIndex);
   return (
     <DL>
       {questionList.map((item, index) => {
@@ -17,13 +15,12 @@ export const AccordionItemList = ({
             showAnswer={showAnswer}
             item={item}
             index={index}
-            onClick={(current) => {
-              console.log(current);
-              current === index ? selectIndex(null) : selectIndex(index);
-            }}
+            onClick={() => selectIndex(index)}
           />
         );
       })}
     </DL>
   );
 };
+
+export default memo(AccordionItemList);
